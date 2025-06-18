@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333; /* Color de texto principal */
+}
+
+/* Estilo para el título en la sección de inicio */
+#inicio h1 {
+    color: #007bff; /* Azul primario de Bootstrap, o un color personalizado */
+    /* text-shadow: 2px 2px 4px rgba(0,0,0,0.1); */ /* Sombra sutil opcional */
+    /* Podríamos añadir una animación CSS aquí más adelante si se desea */
+}
+
+/* Ajustes para el carrusel si es necesario, por ejemplo, altura máxima */
+.carousel-item img {
+    max-height: 500px; /* Ajusta según sea necesario para que no sea demasiado grande */
+    object-fit: cover; /* Para que la imagen cubra el espacio sin distorsionarse */
+}
+
+/* Estilos para las secciones para darles un poco de espacio y separación */
+#inicio, #reserva, #informacion {
+    padding-top: 4rem; /* Ajusta el padding para la altura del navbar fijo si lo fuera */
+    padding-bottom: 2rem;
+}
+
+footer {
+    border-top: 1px solid #e7e7e7;
+}
