@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Barbería</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Torito The Barber$</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="reservas.html">Reservas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="informacion.html">Información</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="container mt-5">
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <form id="reserva-form" action="reservar.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre y Apellido:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" class="form-control" id="fecha" name="fecha" required>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="hora">Hora:</label>
+                        <input type="time" class="form-control" id="hora" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="barbero">Barbero:</label>
+                    <select id="barbero" name="barbero" class="form-control" required>
+                        <option value="">Seleccione un barbero</option>
+                        <option value="Pablo">Pablo</option>
+                        <option value="Oscar">Oscar</option>
+                        <option value="Dario">Darío</option>
+                        <option value="Cristian">Cristian</option>
+                        <option value="Ninguno">Ninguno de preferencia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Servicios:</label>
+                    <div id="servicios">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="corte" name="servicios[]" value="corte" data-price="8000">
+                            <label class="form-check-label" for="corte">Corte ($8000)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="barba" name="servicios[]" value="barba" data-price="2000">
+                            <label class="form-check-label" for="barba">Barba ($2000)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="tenido-completo" name="servicios[]" value="tenido-completo" data-price="20000">
+                            <label class="form-check-label" for="tenido-completo">Teñido completo ($20000)</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="claritos" name="servicios[]" value="claritos" data-price="12000">
+                            <label class="form-check-label" for="claritos">Teñido estilo Claritos ($12000)</label>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Total: $<span id="total">0</span></p>
+
+                <button type="submit" class="btn btn-primary">Reservar</button>
+            </form>
+        </section>
+    </main>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

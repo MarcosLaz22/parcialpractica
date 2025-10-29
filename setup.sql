@@ -1,0 +1,11 @@
+CREATE TABLE reservas (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    fecha DATE NOT NULL,
+    hora TIME NOT NULL,
+    barbero VARCHAR(50) NOT NULL,
+    servicios VARCHAR(255),
+    total INT(10),
+    fecha_reserva TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
